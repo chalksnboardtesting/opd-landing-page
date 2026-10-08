@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigitalOPD — Turn Hospital Marketing Into OPD Appointments</title>
+  <meta name="description" content="DigitalOPD helps hospitals generate patient enquiries, engage and nurture them with AI and human counselling, and convert them into scheduled OPD consultations.">
+  <meta name="keywords" content="hospital patient acquisition, OPD appointments, healthcare marketing technology, AI hospital counselling, patient enquiry nurturing">
+
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:title" content="DigitalOPD — Turn Hospital Marketing Into OPD Appointments">
+  <meta property="og:description" content="Connect marketing spend directly to OPD consultations with AI & human counselling workflows for modern hospitals.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts: Poppins & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/style.css">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1411685020515960');
+  fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <!-- Meta Pixel Fallback for No-JS -->
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1411685020515960&ev=PageView&noscript=1"
+  /></noscript>
+
+  <!-- Root mount containers for modular components -->
+  <div id="header-root"></div>
+
+  <main id="app-main">
+    <div id="hero-root"></div>
+    <div id="solution-root"></div>
+    <div id="ai-calling-root"></div>
+    <div id="features-root"></div>
+    <div id="why-us-root"></div>
+    <div id="faq-root"></div>
+  </main>
+
+  <div id="footer-root"></div>
+  <div id="modal-root"></div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
