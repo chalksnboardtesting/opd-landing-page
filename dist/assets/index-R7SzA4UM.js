@@ -51,31 +51,17 @@
 
           <!-- Video / Interactive Visual Showcase Card (16:9 Aspect Ratio) -->
           <div class="hero-video-card light-video-card">
-            <div class="video-thumbnail-container light-thumb ratio-16-9" style="background: url('/doctor-consultation-hero.jpg') center/cover no-repeat;">
-              <div class="video-overlay-gradient" style="background: linear-gradient(180deg, rgba(10, 25, 49, 0.45) 0%, rgba(10, 25, 49, 0.75) 100%);"></div>
-              
-              <!-- Video Badge Branding -->
-              <div class="video-top-brand" style="position: relative; z-index: 2;">
-                <div class="brand-mini-badge light-brand-badge">
-                  <span class="pulse-dot"></span>
-                  <span>DigitalOPD Patient-Doctor Connection Demo</span>
-                </div>
-              </div>
-
-              <!-- Play Button Center -->
-              <button class="video-play-btn open-demo-modal" aria-label="Play Demo Video" style="position: relative; z-index: 2;">
-                <div class="play-icon-circle cyan-play-btn">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-                <span class="play-label light-play-lbl">Watch Digital Consultation Flow</span>
-              </button>
-
-              <!-- Video Feature Tags at Bottom -->
-              <div class="video-bottom-tags" style="position: relative; z-index: 2;">
-                <div class="v-tag light-vtag">⚡ Voice AI Callback &lt; 30s</div>
-                <div class="v-tag light-vtag">🩺 OPD Attribution</div>
-                <div class="v-tag light-vtag">📈 +42% Consultations</div>
-              </div>
+            <div class="video-container-wrapper ratio-16-9" style="position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #0A1931; border-radius: var(--radius-xl); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/vP45yi220gU?rel=0" 
+                title="DigitalOPD Patient-Doctor Connection Demo" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: var(--radius-xl);"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -505,7 +491,7 @@
         </div>
       </div>
     </section>
-  `}function B(){return`
+  `}function M(){return`
     <section class="section why-section" id="why-us">
       <div class="container">
         <div class="section-header text-center">
@@ -553,7 +539,7 @@
         </div>
       </div>
     </section>
-  `}function M(){return`
+  `}function B(){return`
     <section class="section faq-section" id="faq">
       <div class="container">
         <div class="section-header text-center">
@@ -744,4 +730,4 @@
         </div>
       </div>
     </div>
-  `}const O="https://script.google.com/macros/s/AKfycbxTn822zKFkTXr1XR_8WeT4HeVN-BUJbP_IebTlmEECRRrS_yRCchQhu0HRLz-PWYGNpg/exec";async function b(r){try{const i=await fetch(O,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(r)});return{success:!0}}catch(i){return console.error("Error submitting lead to Google Sheet:",i),{success:!1,error:i.message}}}function I(){document.getElementById("header-root").innerHTML=k(),document.getElementById("hero-root").innerHTML=x(),document.getElementById("solution-root").innerHTML=D(),document.getElementById("ai-calling-root").innerHTML=C(),document.getElementById("features-root").innerHTML=q(),document.getElementById("why-us-root").innerHTML=B(),document.getElementById("faq-root").innerHTML=M(),document.getElementById("footer-root").innerHTML=P(),document.getElementById("modal-root").innerHTML=E()}function S(){const r=document.querySelectorAll(".faq-item");r.forEach(t=>{const s=t.querySelector(".faq-question");s&&s.addEventListener("click",()=>{const o=t.classList.contains("active");r.forEach(l=>l.classList.remove("active")),o||t.classList.add("active")})});const i=document.getElementById("demoModal"),m=document.querySelectorAll(".open-demo-modal"),d=document.getElementById("closeModalBtn"),e=document.getElementById("closeModalSuccess"),a=()=>{i&&(i.classList.add("active"),document.body.style.overflow="hidden")},n=()=>{i&&(i.classList.remove("active"),document.body.style.overflow="",setTimeout(()=>{const t=document.getElementById("modalDemoForm"),s=document.getElementById("modalSuccessState");t&&(t.style.display="flex"),s&&s.classList.remove("active")},300))};m.forEach(t=>t.addEventListener("click",a)),d&&d.addEventListener("click",n),e&&e.addEventListener("click",n),i&&i.addEventListener("click",t=>{t.target===i&&n()});const u=document.getElementById("heroLeadForm"),f=document.getElementById("heroFormSuccess");u&&u.addEventListener("submit",async t=>{var l,c,p,v,h,y;t.preventDefault();const s={fullName:((l=document.getElementById("hFullName"))==null?void 0:l.value)||"",hospitalName:((c=document.getElementById("hHospitalName"))==null?void 0:c.value)||"",hospitalType:((p=document.getElementById("hHospitalType"))==null?void 0:p.value)||"",city:((v=document.getElementById("hCity"))==null?void 0:v.value)||"",phoneNumber:((h=document.getElementById("hPhone"))==null?void 0:h.value)||"",workEmail:((y=document.getElementById("hEmail"))==null?void 0:y.value)||"",source:"DigitalOPD Hero Form"},o=u.querySelector('button[type="submit"]');o&&(o.disabled=!0,o.querySelector("span").innerText="Submitting..."),await b(s),window.fbq&&window.fbq("track","Lead"),u.style.display="none",f&&(f.style.display="flex")});const g=document.getElementById("modalDemoForm"),w=document.getElementById("modalSuccessState");g&&g.addEventListener("submit",async t=>{var l,c,p,v,h;t.preventDefault();const s={fullName:((l=document.getElementById("mFullName"))==null?void 0:l.value)||"",hospitalName:((c=document.getElementById("mHospitalName"))==null?void 0:c.value)||"",workEmail:((p=document.getElementById("mWorkEmail"))==null?void 0:p.value)||"",phoneNumber:((v=document.getElementById("mPhone"))==null?void 0:v.value)||"",city:((h=document.getElementById("mCity"))==null?void 0:h.value)||"",hospitalType:"Demo Request",source:"DigitalOPD Modal Form"},o=g.querySelector('button[type="submit"]');o&&(o.disabled=!0,o.querySelector("span").innerText="Submitting..."),await b(s),window.fbq&&window.fbq("track","Lead"),g.style.display="none",w&&w.classList.add("active")})}document.addEventListener("DOMContentLoaded",()=>{I(),S()});
+  `}const O="https://script.google.com/macros/s/AKfycbxTn822zKFkTXr1XR_8WeT4HeVN-BUJbP_IebTlmEECRRrS_yRCchQhu0HRLz-PWYGNpg/exec";async function b(r){try{const i=await fetch(O,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(r)});return{success:!0}}catch(i){return console.error("Error submitting lead to Google Sheet:",i),{success:!1,error:i.message}}}function S(){document.getElementById("header-root").innerHTML=k(),document.getElementById("hero-root").innerHTML=x(),document.getElementById("solution-root").innerHTML=D(),document.getElementById("ai-calling-root").innerHTML=C(),document.getElementById("features-root").innerHTML=q(),document.getElementById("why-us-root").innerHTML=M(),document.getElementById("faq-root").innerHTML=B(),document.getElementById("footer-root").innerHTML=P(),document.getElementById("modal-root").innerHTML=E()}function I(){const r=document.querySelectorAll(".faq-item");r.forEach(t=>{const s=t.querySelector(".faq-question");s&&s.addEventListener("click",()=>{const o=t.classList.contains("active");r.forEach(l=>l.classList.remove("active")),o||t.classList.add("active")})});const i=document.getElementById("demoModal"),m=document.querySelectorAll(".open-demo-modal"),d=document.getElementById("closeModalBtn"),e=document.getElementById("closeModalSuccess"),a=()=>{i&&(i.classList.add("active"),document.body.style.overflow="hidden")},n=()=>{i&&(i.classList.remove("active"),document.body.style.overflow="",setTimeout(()=>{const t=document.getElementById("modalDemoForm"),s=document.getElementById("modalSuccessState");t&&(t.style.display="flex"),s&&s.classList.remove("active")},300))};m.forEach(t=>t.addEventListener("click",a)),d&&d.addEventListener("click",n),e&&e.addEventListener("click",n),i&&i.addEventListener("click",t=>{t.target===i&&n()});const u=document.getElementById("heroLeadForm"),f=document.getElementById("heroFormSuccess");u&&u.addEventListener("submit",async t=>{var l,c,p,v,h,y;t.preventDefault();const s={fullName:((l=document.getElementById("hFullName"))==null?void 0:l.value)||"",hospitalName:((c=document.getElementById("hHospitalName"))==null?void 0:c.value)||"",hospitalType:((p=document.getElementById("hHospitalType"))==null?void 0:p.value)||"",city:((v=document.getElementById("hCity"))==null?void 0:v.value)||"",phoneNumber:((h=document.getElementById("hPhone"))==null?void 0:h.value)||"",workEmail:((y=document.getElementById("hEmail"))==null?void 0:y.value)||"",source:"DigitalOPD Hero Form"},o=u.querySelector('button[type="submit"]');o&&(o.disabled=!0,o.querySelector("span").innerText="Submitting..."),await b(s),window.fbq&&window.fbq("track","Lead"),u.style.display="none",f&&(f.style.display="flex")});const g=document.getElementById("modalDemoForm"),w=document.getElementById("modalSuccessState");g&&g.addEventListener("submit",async t=>{var l,c,p,v,h;t.preventDefault();const s={fullName:((l=document.getElementById("mFullName"))==null?void 0:l.value)||"",hospitalName:((c=document.getElementById("mHospitalName"))==null?void 0:c.value)||"",workEmail:((p=document.getElementById("mWorkEmail"))==null?void 0:p.value)||"",phoneNumber:((v=document.getElementById("mPhone"))==null?void 0:v.value)||"",city:((h=document.getElementById("mCity"))==null?void 0:h.value)||"",hospitalType:"Demo Request",source:"DigitalOPD Modal Form"},o=g.querySelector('button[type="submit"]');o&&(o.disabled=!0,o.querySelector("span").innerText="Submitting..."),await b(s),window.fbq&&window.fbq("track","Lead"),g.style.display="none",w&&w.classList.add("active")})}document.addEventListener("DOMContentLoaded",()=>{S(),I()});
