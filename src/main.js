@@ -7,6 +7,7 @@ import { renderHero } from './components/Hero.js';
 import { renderSolutionSection } from './components/SolutionSection.js';
 import { renderAICallingSection } from './components/AICallingSection.js';
 import { renderFeaturesSection } from './components/FeaturesSection.js';
+import { renderMedicalTourismSection } from './components/MedicalTourismSection.js';
 import { renderWhyUsSection } from './components/WhyUsSection.js';
 import { renderFAQSection } from './components/FAQSection.js';
 import { renderFooter } from './components/Footer.js';
@@ -21,6 +22,7 @@ function mountComponents() {
   document.getElementById('solution-root').innerHTML = renderSolutionSection();
   document.getElementById('ai-calling-root').innerHTML = renderAICallingSection();
   document.getElementById('features-root').innerHTML = renderFeaturesSection();
+  document.getElementById('medical-tourism-root').innerHTML = renderMedicalTourismSection();
   document.getElementById('why-us-root').innerHTML = renderWhyUsSection();
   document.getElementById('faq-root').innerHTML = renderFAQSection();
   document.getElementById('footer-root').innerHTML = renderFooter();
@@ -112,6 +114,9 @@ function bindInteractions() {
 
       heroForm.style.display = 'none';
       if (heroSuccess) heroSuccess.style.display = 'flex';
+      
+      // Redirect to thank you page
+      window.location.href = '/thankyou';
     });
   }
 
@@ -147,6 +152,9 @@ function bindInteractions() {
 
       modalForm.style.display = 'none';
       if (modalSuccess) modalSuccess.classList.add('active');
+
+      // Redirect to thank you page
+      window.location.href = '/thankyou';
     });
   }
 }
