@@ -116,7 +116,7 @@ function bindInteractions() {
       if (heroSuccess) heroSuccess.style.display = 'flex';
       
       // Redirect to thank you page
-      window.location.href = '/thankyou';
+      window.location.href = '/thankyou.html';
     });
   }
 
@@ -154,7 +154,7 @@ function bindInteractions() {
       if (modalSuccess) modalSuccess.classList.add('active');
 
       // Redirect to thank you page
-      window.location.href = '/thankyou';
+      window.location.href = '/thankyou.html';
     });
   }
 }
